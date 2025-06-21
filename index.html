@@ -1,0 +1,776 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MediQuery: Advanced Medical Imaging Analysis</title>
+    
+    <!-- Improved Font Selection -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=Open+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Enhanced CSS Libraries -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="images/favicon.png">
+</head>
+<body>
+    <!-- Enhanced Navigation with Glassmorphism effect -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="images/logo.svg" alt="MediQuery" height="40"> MediQuery
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#features">Features</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#technology">Technology</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#impact">Impact</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#demo">Demo</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#papers">Research</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Enhanced Hero Section with Particles Background -->
+    <header class="hero-section text-white text-center position-relative">
+        <div id="particles-js"></div>
+        <div class="container position-relative">
+            <div data-aos="fade-up" data-aos-duration="1000">
+                <h1 class="display-3 fw-bold">MediQuery</h1>
+                <div class="separator mx-auto my-3"></div>
+                <h2 class="lead fs-2 mb-4">Advanced AI-Assisted Medical Imaging Analysis</h2>
+                <p class="fs-5 mb-5">Empowering healthcare with intelligent radiology insights</p>
+                <div class="d-flex justify-content-center gap-3">
+                    <a href="#demo" class="btn btn-primary btn-lg pulse-btn">View Demo</a>
+                    <a href="#papers" class="btn btn-outline-light btn-lg">Research</a>
+                </div>
+            </div>
+        </div>
+        <div class="hero-waves">
+            <svg xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" viewBox="0 0 1440 320">
+                <path fill="#ffffff" fill-opacity="1" d="M0,288L48,272C96,256,192,224,288,197.3C384,171,480,149,576,165.3C672,181,768,235,864,250.7C960,267,1056,245,1152,224C1248,203,1344,181,1392,170.7L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+            </svg>
+        </div>
+    </header>
+
+    <!-- About Section with Enhanced Visuals -->
+    <section id="about" class="py-6">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-5 mb-lg-0" data-aos="fade-right">
+                    <h2 class="section-title text-start">About MediQuery</h2>
+                    <div class="separator mb-4"></div>
+                    <p class="lead fw-bold mb-4">Addressing a critical global healthcare challenge through AI innovation</p>
+                    <p class="mb-4">MediQuery is an advanced medical imaging analysis system designed to provide AI-assisted interpretation of chest X-rays. Using a novel retrieval augmented generation approach, the system combines computer vision and natural language processing to deliver accurate, interpretable analyses.</p>
+                    <p>Developed by Tanishk Soni, MediQuery aims to address the critical shortage of radiological expertise in many parts of the world, where approximately 4 billion people lack access to basic radiological services.</p>
+                </div>
+                <div class="col-lg-6" data-aos="fade-left">
+                    <div class="about-image-container">
+                        <img src="images/about-illustration.png" alt="MediQuery System" class="img-fluid rounded-lg shadow-lg">
+                        <div class="floating-tech-icon" style="top:15%; left:10%;">
+                            <img src="images/icon-pytorch.svg" alt="PyTorch">
+                        </div>
+                        <div class="floating-tech-icon" style="top:25%; right:10%;">
+                            <img src="images/icon-transformer.svg" alt="Transformers">
+                        </div>
+                        <div class="floating-tech-icon" style="bottom:15%; left:15%;">
+                            <img src="images/icon-vision.svg" alt="Computer Vision">
+                        </div>
+                        <div class="floating-tech-icon" style="bottom:25%; right:15%;">
+                            <img src="images/icon-nlp.svg" alt="NLP">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Enhanced Stats Section with Counter Animation -->
+    <section class="bg-light py-6 position-relative">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-md-3 mb-4 mb-md-0">
+                    <div class="stat-card p-4 bg-white rounded shadow-sm h-100" data-aos="zoom-in" data-aos-delay="100">
+                        <div class="stat-icon mb-3">
+                            <i class="bi bi-graph-up text-primary"></i>
+                        </div>
+                        <h3 class="stat-number count-up" data-target="78">0</h3>
+                        <div class="percentage-symbol">%</div>
+                        <p class="stat-description">F1 Score Accuracy</p>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-4 mb-md-0">
+                    <div class="stat-card p-4 bg-white rounded shadow-sm h-100" data-aos="zoom-in" data-aos-delay="200">
+                        <div class="stat-icon mb-3">
+                            <i class="bi bi-images text-primary"></i>
+                        </div>
+                        <h3 class="stat-number count-up" data-target="30">0</h3>
+                        <div class="decimal-part">.6K</div>
+                        <p class="stat-description">Images in Knowledge Base</p>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-4 mb-md-0">
+                    <div class="stat-card p-4 bg-white rounded shadow-sm h-100" data-aos="zoom-in" data-aos-delay="300">
+                        <div class="stat-icon mb-3">
+                            <i class="bi bi-clipboard2-pulse text-primary"></i>
+                        </div>
+                        <h3 class="stat-number count-up" data-target="14">0</h3>
+                        <p class="stat-description">Detectable Conditions</p>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-4 mb-md-0">
+                    <div class="stat-card p-4 bg-white rounded shadow-sm h-100" data-aos="zoom-in" data-aos-delay="400">
+                        <div class="stat-icon mb-3">
+                            <i class="bi bi-lightning text-primary"></i>
+                        </div>
+                        <h3 class="stat-number count-up" data-target="3">0</h3>
+                        <div class="decimal-part">.2s</div>
+                        <p class="stat-description">Average Response Time</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Enhanced Features Section with Cards -->
+    <section id="features" class="py-6">
+        <div class="container">
+            <div class="text-center mb-5" data-aos="fade-up">
+                <h2 class="section-title">Key Features</h2>
+                <div class="separator mx-auto mb-4"></div>
+                <p class="lead text-muted">Powerful capabilities that make MediQuery an exceptional tool</p>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="feature-card h-100">
+                        <div class="feature-icon-wrapper mb-4">
+                            <i class="bi bi-eye-fill"></i>
+                        </div>
+                        <h3 class="feature-title">Attention Mapping</h3>
+                        <p>Visualize areas of interest on chest X-rays with advanced attention mapping technology, helping users understand where the system is focusing.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="feature-card h-100">
+                        <div class="feature-icon-wrapper mb-4">
+                            <i class="bi bi-search"></i>
+                        </div>
+                        <h3 class="feature-title">Knowledge Retrieval</h3>
+                        <p>Access relevant medical knowledge by retrieving similar cases from a database of 30.6K annotated chest X-rays from the MIMIC-CXR dataset.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+                    <div class="feature-card h-100">
+                        <div class="feature-icon-wrapper mb-4">
+                            <i class="bi bi-chat-text-fill"></i>
+                        </div>
+                        <h3 class="feature-title">Natural Language Analysis</h3>
+                        <p>Receive clear, structured radiological assessments formatted in standard medical reporting style with findings and impression sections.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
+                    <div class="feature-card h-100">
+                        <div class="feature-icon-wrapper mb-4">
+                            <i class="bi bi-question-circle-fill"></i>
+                        </div>
+                        <h3 class="feature-title">Medical Q&A</h3>
+                        <p>Ask specific questions about radiological findings, conditions, and differentials to receive evidence-based explanations.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="500">
+                    <div class="feature-card h-100">
+                        <div class="feature-icon-wrapper mb-4">
+                            <i class="bi bi-puzzle-fill"></i>
+                        </div>
+                        <h3 class="feature-title">Anatomical Region Detection</h3>
+                        <p>Automatically identifies and labels key anatomical regions in chest X-rays to provide structured analysis of each area.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="600">
+                    <div class="feature-card h-100">
+                        <div class="feature-icon-wrapper mb-4">
+                            <i class="bi bi-shield-check"></i>
+                        </div>
+                        <h3 class="feature-title">Confidence Scoring</h3>
+                        <p>Transparent confidence metrics help users understand the reliability of the system's analysis for each case.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Enhanced Technology Section with Interactive Elements -->
+    <section id="technology" class="py-6 bg-light position-relative">
+        <div class="container">
+            <div class="text-center mb-5" data-aos="fade-up">
+                <h2 class="section-title">Technology Stack</h2>
+                <div class="separator mx-auto mb-4"></div>
+                <p class="lead text-muted">Powered by cutting-edge AI technologies</p>
+            </div>
+            
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-5 mb-lg-0" data-aos="fade-right">
+                    <div class="architecture-container">
+                        <div class="architecture-image">
+                            <img src="images/architecture-diagram.png" alt="MediQuery Architecture" class="img-fluid rounded shadow">
+                        </div>
+                        <div class="architecture-overlay">
+                            <div class="architecture-badge" style="top:20%; left:20%;" data-bs-toggle="tooltip" data-bs-placement="top" title="Image Feature Extraction">
+                                <i class="bi bi-image"></i>
+                            </div>
+                            <div class="architecture-badge" style="top:20%; right:20%;" data-bs-toggle="tooltip" data-bs-placement="top" title="Text Processing">
+                                <i class="bi bi-chat-square-text"></i>
+                            </div>
+                            <div class="architecture-badge" style="bottom:30%; left:30%;" data-bs-toggle="tooltip" data-bs-placement="top" title="Knowledge Retrieval">
+                                <i class="bi bi-database"></i>
+                            </div>
+                            <div class="architecture-badge" style="bottom:30%; right:30%;" data-bs-toggle="tooltip" data-bs-placement="top" title="Response Generation">
+                                <i class="bi bi-cpu"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6" data-aos="fade-left">
+                    <div class="accordion custom-accordion" id="techAccordion">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne">
+                                    <i class="bi bi-image-alt me-3"></i> Image Processing
+                                </button>
+                            </h2>
+                            <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#techAccordion">
+                                <div class="accordion-body">
+                                    <p>MediQuery utilizes a modified DenseNet121 architecture (CheXNet) for chest X-ray feature extraction. The model has been trained on over 100,000 radiographs and outputs 1024-dimensional embedding vectors representing key image features.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo">
+                                    <i class="bi bi-chat-square-text me-3"></i> Text Processing
+                                </button>
+                            </h2>
+                            <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#techAccordion">
+                                <div class="accordion-body">
+                                    <p>BioBERT, a biomedical language representation model pre-trained on PubMed abstracts and PMC full-text articles, processes natural language queries and generates 768-dimensional embedding vectors of medical concepts.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree">
+                                    <i class="bi bi-database me-3"></i> Knowledge Retrieval
+                                </button>
+                            </h2>
+                            <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#techAccordion">
+                                <div class="accordion-body">
+                                    <p>The FAISS vector database enables efficient similarity search across 30.6K embeddings from the MIMIC-CXR dataset. Hybrid retrieval combines text and image similarity scores with adaptive weighting based on query characteristics.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour">
+                                    <i class="bi bi-cpu me-3"></i> Response Generation
+                                </button>
+                            </h2>
+                            <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#techAccordion">
+                                <div class="accordion-body">
+                                    <p>A fine-tuned FLAN-T5 model generates structured radiological assessments based on retrieved context. The model has been specifically optimized for medical report generation with specialized training on radiologist-authored reports.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="tech-particles"></div>
+    </section>
+
+    <!-- Enhanced Impact Section -->
+    <section id="impact" class="py-6">
+        <div class="container">
+            <div class="text-center mb-5" data-aos="fade-up">
+                <h2 class="section-title">Global Impact</h2>
+                <div class="separator mx-auto mb-4"></div>
+                <p class="lead text-muted">Addressing a critical healthcare need worldwide</p>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-lg-5" data-aos="fade-right">
+                    <div class="impact-card h-100">
+                        <h3 class="d-flex align-items-center"><i class="bi bi-globe2 text-primary me-3"></i> Global Radiology Gap</h3>
+                        <p class="lead mb-4">Bridging the critical shortage of radiological expertise</p>
+                        <p>According to the World Health Organization, approximately 4 billion people worldwide lack access to basic radiological services. In low-income countries, the ratio of radiologists to population can be as low as 1:1,000,000, compared to 1:10,000 in high-income countries.</p>
+                        <div class="impact-chart mt-4">
+                            <div class="chart-container position-relative">
+                                <img src="images/radiology-market.png" alt="Radiology-as-a-Service Market Growth" class="img-fluid rounded shadow-sm">
+                                <div class="chart-overlay"></div>
+                            </div>
+                            <div class="chart-caption mt-2 text-muted small fst-italic">
+                                Growing demand for radiology services highlights the need for AI-assisted solutions
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-7" data-aos="fade-left">
+                    <div class="row g-4 h-100">
+                        <div class="col-md-12">
+                            <div class="impact-card">
+                                <h3 class="d-flex align-items-center"><i class="bi bi-hospital text-primary me-3"></i> Potential Applications</h3>
+                                <div class="row mt-4">
+                                    <div class="col-md-6 mb-4">
+                                        <div class="application-item d-flex">
+                                            <div class="application-icon">
+                                                <i class="bi bi-house-heart"></i>
+                                            </div>
+                                            <div class="application-content">
+                                                <h5>Rural Healthcare</h5>
+                                                <p>Supporting general practitioners without radiologist access</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 mb-4">
+                                        <div class="application-item d-flex">
+                                            <div class="application-icon">
+                                                <i class="bi bi-book"></i>
+                                            </div>
+                                            <div class="application-content">
+                                                <h5>Medical Education</h5>
+                                                <p>Training tool for students and residents</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 mb-4">
+                                        <div class="application-item d-flex">
+                                            <div class="application-icon">
+                                                <i class="bi bi-activity"></i>
+                                            </div>
+                                            <div class="application-content">
+                                                <h5>Emergency Response</h5>
+                                                <p>Rapid triage during disasters or pandemics</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 mb-4">
+                                        <div class="application-item d-flex">
+                                            <div class="application-icon">
+                                                <i class="bi bi-camera-video"></i>
+                                            </div>
+                                            <div class="application-content">
+                                                <h5>Telehealth</h5>
+                                                <p>Remote diagnostic support for telemedicine</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="impact-card h-100 d-flex align-items-center">
+                                <div class="d-flex align-items-center">
+                                    <div class="sdg-logo me-4">
+                                        <img src="images/sdg3-logo.png" alt="SDG 3" class="img-fluid" style="max-height: 80px;">
+                                    </div>
+                                    <div>
+                                        <h3>SDG Alignment</h3>
+                                        <p class="mb-0">MediQuery contributes to UN Sustainable Development Goal 3: Good Health and Well-being by helping reduce inequalities in access to quality diagnostic services.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Enhanced Demo Section -->
+    <section id="demo" class="py-6 bg-light">
+        <div class="container">
+            <div class="text-center mb-5" data-aos="fade-up">
+                <h2 class="section-title">Interactive Demo</h2>
+                <div class="separator mx-auto mb-4"></div>
+                <p class="lead text-muted">Experience MediQuery in action</p>
+            </div>
+            
+            <div class="row justify-content-center">
+                <div class="col-lg-10" data-aos="zoom-in">
+                    <div class="demo-card">
+                        <div class="ratio ratio-16x9 mb-4 demo-video-container">
+                            <iframe src="https://www.youtube.com/embed/demo-placeholder" title="MediQuery Demo" allowfullscreen></iframe>
+                        </div>
+                        <div class="text-center mb-4">
+                            <p class="text-muted mb-2">Demo application under development</p>
+                            <a href="#contact" class="btn btn-primary btn-lg demo-btn">
+                                <i class="bi bi-envelope me-2"></i> Request Demo Access
+                            </a>
+                        </div>
+                        <div class="demo-instructions">
+                            <h4 class="mb-4">How the Demo Works</h4>
+                            <div class="row g-4">
+                                <div class="col-md-6">
+                                    <div class="instruction-card">
+                                        <div class="instruction-icon">
+                                            <i class="bi bi-upload"></i>
+                                        </div>
+                                        <h5>Upload an X-ray</h5>
+                                        <p>Upload a chest X-ray image or use one of the provided examples</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="instruction-card">
+                                        <div class="instruction-icon">
+                                            <i class="bi bi-chat-dots"></i>
+                                        </div>
+                                        <h5>Ask a Question</h5>
+                                        <p>Enter a text query about chest X-ray interpretation</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="instruction-card">
+                                        <div class="instruction-icon">
+                                            <i class="bi bi-eye"></i>
+                                        </div>
+                                        <h5>View Results</h5>
+                                        <p>Examine the generated analysis and attention map</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="instruction-card">
+                                        <div class="instruction-icon">
+                                            <i class="bi bi-zoom-in"></i>
+                                        </div>
+                                        <h5>Explore Details</h5>
+                                        <p>Explore the detailed findings and regions of interest</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="alert alert-info mt-4">
+                                <i class="bi bi-info-circle me-2"></i> <strong>Note:</strong> This demo is for educational purposes only and is not intended for clinical use.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Enhanced Research Papers Section -->
+    <section id="papers" class="py-6">
+        <div class="container">
+            <div class="text-center mb-5" data-aos="fade-up">
+                <h2 class="section-title">Research & Documentation</h2>
+                <div class="separator mx-auto mb-4"></div>
+                <p class="lead text-muted">Technical details and project documentation</p>
+            </div>
+            
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <div class="row g-4">
+                        <div class="col-md-6" data-aos="fade-up" data-aos-delay="100">
+                            <div class="paper-card h-100">
+                                <div class="paper-icon">
+                                    <i class="bi bi-file-earmark-text"></i>
+                                </div>
+                                <div class="paper-content">
+                                    <h3>MediQuery: An Enhanced RAG-Based System for Medical Imaging Analysis</h3>
+                                    <p class="paper-authors">Tanishk Soni</p>
+                                    <p class="paper-venue">Final Year Project, March 2025</p>
+                                    <p class="paper-abstract">This paper presents MediQuery, a novel retrieval augmented generation system for medical imaging analysis with a focus on chest X-ray interpretation...</p>
+                                    <div class="paper-links">
+                                        <a href="#" class="btn btn-sm btn-outline-primary me-2">
+                                            <i class="bi bi-file-earmark-pdf me-1"></i> Project Report
+                                        </a>
+                                        <a href="#" class="btn btn-sm btn-outline-secondary me-2">
+                                            <i class="bi bi-easel me-1"></i> Presentation
+                                        </a>
+                                        <a href="https://github.com/bitphonix" class="btn btn-sm btn-outline-dark">
+                                            <i class="bi bi-github me-1"></i> GitHub
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6" data-aos="fade-up" data-aos-delay="200">
+                            <div class="paper-card h-100">
+                                <div class="paper-icon">
+                                    <i class="bi bi-file-earmark-code"></i>
+                                </div>
+                                <div class="paper-content">
+                                    <h3>Technical Report: MediQuery System Architecture and Implementation</h3>
+                                    <p class="paper-authors">Tanishk Soni</p>
+                                                                        <p class="paper-venue">Technical Documentation, March 2025</p>
+                                    <p class="paper-abstract">This technical report details the architecture, implementation, and evaluation of the MediQuery system, including performance metrics and deployment considerations...</p>
+                                    <div class="paper-links">
+                                        <a href="#" class="btn btn-sm btn-outline-primary">
+                                            <i class="bi bi-file-earmark-pdf me-1"></i> Technical Documentation
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Enhanced Contact Section -->
+    <section id="contact" class="py-6 bg-light">
+        <div class="container">
+            <div class="text-center mb-5" data-aos="fade-up">
+                <h2 class="section-title">Contact & Collaboration</h2>
+                <div class="separator mx-auto mb-4"></div>
+                <p class="lead text-muted">Get in touch to learn more or collaborate</p>
+            </div>
+            
+            <div class="row justify-content-center">
+                <div class="col-lg-8" data-aos="fade-up">
+                    <div class="contact-card">
+                        <div class="row align-items-center">
+                            <div class="col-md-4 mb-4 mb-md-0 text-center text-md-start">
+                                <div class="profile-image-container">
+                                    <img src="images/profile.jpg" alt="Tanishk Soni" class="profile-image img-fluid">
+                                </div>
+                            </div>
+                            <div class="col-md-8">
+                                <h3 class="mb-3">Tanishk Soni</h3>
+                                <p class="lead mb-4">Developer of MediQuery</p>
+                                
+                                <div class="contact-info">
+                                    <div class="contact-item d-flex align-items-center mb-3">
+                                        <div class="contact-icon">
+                                            <i class="bi bi-envelope"></i>
+                                        </div>
+                                        <div class="contact-text">
+                                            <a href="mailto:100nitanishk2002@gmail.com">100nitanishk2002@gmail.com</a>
+                                        </div>
+                                    </div>
+                                    <div class="contact-item d-flex align-items-center mb-3">
+                                        <div class="contact-icon">
+                                            <i class="bi bi-geo-alt"></i>
+                                        </div>
+                                        <div class="contact-text">
+                                            AI & ML Enthusiast
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="social-links mt-4">
+                                    <a href="https://github.com/bitphonix" class="social-link github" target="_blank">
+                                        <i class="bi bi-github"></i>
+                                    </a>
+                                    <a href="https://www.linkedin.com/in/tanishk-soni-a94077239/" class="social-link linkedin" target="_blank">
+                                        <i class="bi bi-linkedin"></i>
+                                    </a>
+                                    <a href="https://x.com/AffiliatorO" class="social-link twitter" target="_blank">
+                                        <!-- Custom X logo (formerly Twitter) -->
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                                          <path d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865l8.875 11.633Z"/>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Enhanced Footer -->
+    <footer class="footer py-5 bg-dark text-white">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-4 text-center text-md-start mb-3 mb-md-0">
+                    <a href="#" class="footer-brand d-flex align-items-center justify-content-center justify-content-md-start">
+                        <img src="images/logo-white.svg" alt="MediQuery" height="30" class="me-2">
+                        <span class="ms-2">MediQuery</span>
+                    </a>
+                </div>
+                <div class="col-md-4 text-center mb-3 mb-md-0">
+                    <p class="small mb-0">© 2025 MediQuery Project</p>
+                    <p class="small mb-0">Last updated: 2025-03-10 17:33:52</p>
+                </div>
+                <div class="col-md-4 d-flex justify-content-center justify-content-md-end">
+                    <a href="https://github.com/bitphonix" class="social-link me-3" target="_blank">
+                        <i class="bi bi-github"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/tanishk-soni-a94077239/" class="social-link me-3" target="_blank">
+                        <i class="bi bi-linkedin"></i>
+                    </a>
+                    <a href="https://x.com/AffiliatorO" class="social-link" target="_blank">
+                        <!-- Custom X logo (formerly Twitter) -->
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                          <path d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865l8.875 11.633Z"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to top button -->
+    <button type="button" class="btn btn-primary btn-floating btn-lg" id="btn-back-to-top">
+        <i class="bi bi-arrow-up"></i>
+    </button>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true
+        });
+
+        // Initialize Particles.js
+        document.addEventListener('DOMContentLoaded', function() {
+            if (typeof particlesJS !== 'undefined') {
+                particlesJS('particles-js', {
+                    "particles": {
+                        "number": {
+                            "value": 80,
+                            "density": {
+                                "enable": true,
+                                "value_area": 800
+                            }
+                        },
+                        "color": {
+                            "value": "#ffffff"
+                        },
+                        "opacity": {
+                            "value": 0.5,
+                            "random": false
+                        },
+                        "size": {
+                            "value": 3,
+                            "random": true
+                        },
+                        "line_linked": {
+                            "enable": true,
+                            "distance": 150,
+                            "color": "#ffffff",
+                            "opacity": 0.4,
+                            "width": 1
+                        },
+                        "move": {
+                            "enable": true,
+                            "speed": 2,
+                            "direction": "none",
+                            "random": false,
+                            "straight": false,
+                            "out_mode": "out",
+                            "bounce": false
+                        }
+                    },
+                    "interactivity": {
+                        "detect_on": "canvas",
+                        "events": {
+                            "onhover": {
+                                "enable": true,
+                                "mode": "grab"
+                            },
+                            "onclick": {
+                                "enable": true,
+                                "mode": "push"
+                            },
+                            "resize": true
+                        }
+                    },
+                    "retina_detect": true
+                });
+            }
+            
+            // Initialize tooltips
+            var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+            tooltipTriggerList.map(function (tooltipTriggerEl) {
+                return new bootstrap.Tooltip(tooltipTriggerEl);
+            });
+            
+            // Back to top button
+            let mybutton = document.getElementById("btn-back-to-top");
+            window.onscroll = function () {
+                scrollFunction();
+            };
+
+            function scrollFunction() {
+                if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                    mybutton.style.display = "block";
+                } else {
+                    mybutton.style.display = "none";
+                }
+            }
+            
+            mybutton.addEventListener("click", function() {
+                document.body.scrollTop = 0;
+                document.documentElement.scrollTop = 0;
+            });
+            
+            // Counter animation
+            const countUpElements = document.querySelectorAll('.count-up');
+            
+            const countUpAnimation = (el) => {
+                const target = parseInt(el.getAttribute('data-target'));
+                const duration = 2000; // ms
+                const step = target / (duration / 16); // 60fps
+                let current = 0;
+                
+                const counter = setInterval(() => {
+                    current += step;
+                    if (current > target) {
+                        el.textContent = target;
+                        clearInterval(counter);
+                    } else {
+                        el.textContent = Math.floor(current);
+                    }
+                }, 16);
+            };
+            
+            // Intersection Observer for counter animation
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        countUpAnimation(entry.target);
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.5 });
+            
+            countUpElements.forEach(el => {
+                observer.observe(el);
+            });
+            
+            // Navbar color change on scroll
+            const navbar = document.getElementById('mainNav');
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 50) {
+                    navbar.classList.add('navbar-scrolled');
+                } else {
+                    navbar.classList.remove('navbar-scrolled');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
+
+
