@@ -65,13 +65,17 @@ mediquery/
 
 ## 🏛️ System Architecture
 
-### High-level Pipeline
+### Architecture Diagram
+![Architecture Diagram](https://github.com/user-attachments/assets/b50223f2-226d-4319-bd21-a96763ab424e)
 
-### Hybrid RAG Flow
+### FlowChart
+![FlowChart](https://github.com/user-attachments/assets/db0cbf8b-9dc3-4711-943f-3185918611c9)
 
-### Memory Management Logic
+### Memory Management Diagram
+![Memoery Management Diagram](https://github.com/user-attachments/assets/3ce8ffad-3237-4317-9477-89d476ee116c)
 
 ### Web Interface Overview
+![Web Interface Diagram](https://github.com/user-attachments/assets/fe44b0d2-428a-4a08-a94e-e4cd3adbf57b)
 
 ---
 
